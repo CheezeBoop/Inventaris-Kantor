@@ -86,9 +86,9 @@
     let jumlah   = parseInt(document.getElementById("jumlah").value);
     let kategori = document.getElementById("kategori").value;
 
-    // Semua field wajib diisi sebelum disimpan
-    if (!nama || !jumlah || !kategori) {
-      alert("Semua field harus diisi!");
+    // Semua field wajib diisi dan jumlah harus angka positif
+    if (!nama || !jumlah || jumlah < 1 || !kategori) {
+      alert("Semua field harus diisi dan jumlah harus lebih dari 0!");
       return;
     }
 
